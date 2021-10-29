@@ -1,0 +1,96 @@
+@import url("../_normalize.css");
+@import url("../_global.css");
+@import url("../_fonts.css");
+@import url("../_overall.css");
+@import url("../style.css");
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card__block {
+  width: calc(50% - 30px);
+  padding: 15px;
+  height: 100%;
+}
+
+.card__photo--big {
+  padding-bottom: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 30%;
+  min-height: 400px;
+  opacity: 1;
+  transition: background-image 0.2s ease-in;
+}
+
+.card__photo--small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+  /* transition: background-image 0.2s ease-in; */
+  /* position: relative; */
+}
+
+.img {
+  width: calc(50% - 10px);
+  margin: 2.5px;
+  overflow: hidden;
+  padding-bottom: 30%;
+  position: relative;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.card__photo--small .imgP::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+}
+
+.card__block--title {
+  font-size: 34px;
+  line-height: 46px;
+  margin-bottom: 23px;
+}
+
+.card__block--price {
+  color: #dcab8a;
+  font-size: 1.25em;
+  margin-bottom: 20px;
+}
+
+.card__block--btn {
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: Fira Sans, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #dcab8a;
+  border-color: #dcab8a;
+  display: block;
+  padding: 14px 21px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  .card__block {
+    width: calc(100% - 30px);
+    padding: 15px;
+  }
+}

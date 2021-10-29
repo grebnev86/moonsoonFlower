@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "FiraMono";
+  src: url("../fonts/FiraMono-Regular.woff2") format("woff2"),
+    url("../fonts/FiraMono-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400; /*regular*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Light.woff2") format("woff2"),
+    url("../fonts/FiraSans-Light.woff") format("woff");
+  font-display: swap;
+  font-weight: 300; /*light*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Medium.woff") format("woff");
+  font-display: swap;
+  font-weight: 500; /*regular*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400; /*regular*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700; /*bold*/
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400; /*regular*/
+  font-style: normal;
+}
