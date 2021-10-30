@@ -1,7 +1,7 @@
-@import url("_normalize.css");
-@import url("_global.css");
-@import url("_fonts.css");
-@import url("_overall.css");
+@import url("normalize.css");
+@import url("global.css");
+@import url("fonts.css");
+@import url("overall.css");
 
 /***********Header*********/
 .header {
