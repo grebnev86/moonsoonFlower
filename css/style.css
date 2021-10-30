@@ -350,6 +350,17 @@
     align-items: center;
   }
 
+  .firstScreen {
+    background-image: url(../img/backgroundRight.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .firstScreen__wrapper {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
   .firstScreen__title {
     font-size: 28px;
     line-height: 35px;
@@ -365,6 +376,10 @@
 
   .headerConnection__block {
     margin-bottom: 10px;
+  }
+
+  .headerConnection__block--phone {
+    display: none;
   }
 
   .firstScreen__wrapper {
