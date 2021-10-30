@@ -36,7 +36,7 @@ cross.addEventListener('click', (event) => {
 })
 
 firstScreenBtn.addEventListener('click', (event) => {
-    popUp.style.top = '50%';
+    popUp.style.top = '10%';
     popUp.style.opacity = 1;
 
 })

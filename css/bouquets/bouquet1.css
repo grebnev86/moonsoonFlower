@@ -22,7 +22,7 @@
   background-position: center;
   background-size: contain;
   height: 30%;
-  min-height: 400px;
+  /* min-height: 400px; */
   opacity: 1;
   transition: background-image 0.2s ease-in;
 }

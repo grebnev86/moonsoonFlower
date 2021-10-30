@@ -9,28 +9,34 @@
 </head>
 <body>
 
-
+    <div class="popUp">
+        <div class="container">
+            <div class="popUp__cross"></div>
+            <div class="popUp__content">
+                <div class="popUp__TextContent">
+                    <div class="h1">Do you want to order the perfect bouquet?</div>
+                    <div class="popUp__text">Leave your phone number and our manager will help you pick up your dream
+                        bouquet.</div>
+                </div>
+    
+                <form class="popUp__form" action="./sendmail.php" method="POST">
+                    <input class="popUp__form--item popUp__form--text" type="text" placeholder="Enter your name"
+                        name='user_name'>
+                    <input class="popUp__form--item popUp__form--number" type="number" placeholder="Enter your number"
+                        name='user_number'>
+                    <textarea class="popUp__form--item popUp__form--textarea" name="textarea" cols="30" rows="10"
+                        placeholder="Your message"></textarea>
+                    <input class="btn-reset  popUp__form--btn" type="submit" name='user_textarea'>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <header class="header">
         
         <div class="container">
-            <div class="popUp">
-                <div class="popUp__cross"></div>
-                <div class="popUp__content">
-                    <div class="popUp__TextContent">
-                        <div class="h1">Do you want to order the perfect bouquet?</div>
-                        <div class="popUp__text">Leave your phone number and our manager will help you pick up your dream bouquet.</div>
-                    </div>
-                    
-                    <form class="popUp__form" action="./sendmail.php" method="POST">
-                        <input class="popUp__form--item popUp__form--text" type="text" placeholder="Enter your name" name='user_name'>
-                        <input class="popUp__form--item popUp__form--number" type="number" placeholder="Enter your number" name='user_number'>
-                        <textarea class="popUp__form--item popUp__form--textarea" name="textarea" cols="30" rows="10" placeholder="Your message"></textarea>
-                        <input class="btn-reset  popUp__form--btn" type="submit" name='user_textarea'>
-                    </form>
-                </div>
-            </div>
+            
             <div class="header__wrapper">
                 <div class="header__logo">
                     <img src="./img/newlogo1.png" alt="logo">
@@ -126,6 +132,7 @@
                 <div class="bouquets__container">
                     <div class="bouquet__block">
                         <div class="bouquet_wrapperImg">
+                            <a class="bouquet_wrapperImg--link"  href="./bouquet.html"></a>
                             <img src="./img/baqet.jpeg" alt="bouquet">
                         </div>
                         <div class="our__bouquets--title">Everything Is Coming Up Roses</div>
