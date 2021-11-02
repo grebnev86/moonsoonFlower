@@ -385,9 +385,7 @@
   font-family: "Montserrat", serif;
   font-weight: 400;
   font-size: 16px;
-
   width: 70%;
-  text-align: center;
   margin: 0 auto;
   margin-bottom: 70px;
 }
@@ -401,8 +399,84 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__wrapper {
+  .container {
+    padding: 0 15px;
   }
+
+  .popUp {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 64px 5px 40px 5px;
+    width: 90%;
+    max-height: 90vh;
+  }
+
+  .popUp__title {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .popUp__TextContent {
+    text-align: left;
+    color: #545454;
+  }
+
+  .popUp__text {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .popUp__form {
+    width: 100%;
+  }
+
+  .popUp__form--item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 12px;
+    padding-left: 12px;
+    /* color: rgba(84, 84, 84, 0.5); */
+  }
+
+  ::-webkit-input-placeholder {
+    color: rgba(84, 84, 84, 0.5);
+
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  ::-moz-placeholder {
+    color: rgba(84, 84, 84, 0.5);
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 16px;
+  } /* Firefox 19+ */
+
+  :-moz-placeholder {
+    color: rgba(84, 84, 84, 0.5);
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 16px;
+  } /* Firefox 18- */
+
+  :-ms-input-placeholder {
+    color: rgba(84, 84, 84, 0.5);
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .popUp__form--textarea {
+    height: 127px;
+  }
+
   .header__wrapper {
     flex-direction: column;
     align-items: center;
