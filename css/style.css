@@ -31,7 +31,14 @@
   align-items: center;
 }
 
-.headerConnection__block {
+.headerConnection__link img {
+  transition: 0.3s;
+}
+
+.headerConnection__link:hover .svg__change {
+  fill: #57adac;
+  transition: 0.3s;
+  /* opacity: 0.5; */
 }
 
 .headerConnection__item {
@@ -195,13 +202,6 @@
 }
 
 /**********first************/
-/* .firstScreen {
-  background-image: url("../img/backgroundRight.jpg"),
-    url("../img/backgroundLeft.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: right, left;
-  background-size: contain;
-} */
 
 .firstScreen__wrapper {
   padding-top: 60px;
@@ -218,7 +218,7 @@
 
 .firstScreen__title {
   font-family: "PlayfairDisplay", serif;
-  font-weight: 500;
+  font-weight: 700;
   color: #545454;
   font-size: 55px;
   line-height: 68px;
@@ -229,18 +229,26 @@
   font-family: "Montserrat", serif;
   font-size: 20px;
   line-height: 24px;
-  margin-bottom: 42px;
+  margin-bottom: 52px;
   color: #545454;
+  font-weight: 400;
   /*Добавь шрифт*/
 }
 
 .firstScreen__btn {
-  background-color: #ffe7da;
+  background-color: #61c0bf;
   font-weight: 400;
   font-size: 20px;
   padding: 10px 32px;
   margin-bottom: 70px;
   font-family: "PlayfairDisplay", serif;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.firstScreen__btn:hover {
+  background-color: #57adac;
+  transition: 0.3;
 }
 
 .firstScreenContent__adv {
@@ -388,8 +396,8 @@
   }
 
   .firstScreen__title {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .header__logo {
@@ -414,6 +422,14 @@
 
   .firstScreenContent__adv {
     display: block;
+  }
+
+  .firstScreen__title {
+    margin-bottom: 16px;
+  }
+
+  .firstScreenContent__text {
+    margin-bottom: 34px;
   }
 
   .adv__card {

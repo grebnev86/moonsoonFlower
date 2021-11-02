@@ -49,6 +49,7 @@ firstScreenBtn.addEventListener('click', (event) => {
 
     popUp.style.top = 0;
     popUp.style.opacity = 1;
+    popUp.style.top = 0;
 
 })
 
