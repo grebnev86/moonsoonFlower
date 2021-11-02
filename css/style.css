@@ -4,14 +4,19 @@
 @import url("overall.css");
 
 /***********Header*********/
-.header {
-  padding: 5px 0;
-  position: relative;
+.header__firstScreen {
+  background-image: url("../img/backgroundRight.jpg"),
+    url("../img/backgroundLeft.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, left;
+  background-size: contain;
 }
+
 .header__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 15px 0;
 }
 
 .header__connection {
@@ -35,18 +40,26 @@
 
 /*********** POPUP**********/
 
-.popUp {
+.popUp__container {
   position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(224, 224, 224, 0.5);
+  z-index: 1;
+  left: 0;
+  top: -150vh;
+  transition: 0.5s;
+}
+
+.popUp {
   width: fit-content;
   margin: 0 auto;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(255, 255, 255);
   padding: 80px 42px 51px 42px;
-  /* position: relative; */
-  z-index: 10;
-  left: 50%;
-  top: -150vh;
-  transform: translate(-50%);
-  transition: 0.5s;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 .popUp__cross {
@@ -182,14 +195,13 @@
 }
 
 /**********first************/
-.firstScreen {
-  /* background-color: #bce5bd; */
+/* .firstScreen {
   background-image: url("../img/backgroundRight.jpg"),
     url("../img/backgroundLeft.jpg");
-  /* background-size: auto, auto; */
   background-repeat: no-repeat, no-repeat;
   background-position: right, left;
-}
+  background-size: contain;
+} */
 
 .firstScreen__wrapper {
   padding-top: 60px;
@@ -260,6 +272,11 @@
 
 .adv__card--img {
   margin-bottom: 24px;
+}
+
+.adv__card--img img {
+  width: 112px;
+  height: 112px;
 }
 
 .adv__card--title {
@@ -356,9 +373,10 @@
   .header__wrapper {
     flex-direction: column;
     align-items: center;
+    padding: 5px 0;
   }
 
-  .firstScreen {
+  .header__firstScreen {
     background-image: url(../img/backgroundRight.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -375,7 +393,7 @@
   }
 
   .header__logo {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
 
   .header__connection {
@@ -404,14 +422,20 @@
   .adv__card {
     width: calc(100% - 16px);
     display: flex;
-    position: static;
+    /* position: static; */
     text-align: left;
     margin: 0 auto;
-    width: 70%;
+    /* width: 70%; */
     border: none;
     border-bottom: 2px solid #ffb6b9;
     padding-bottom: 12px;
     padding-top: 42px;
+  }
+
+  .adv__card img {
+    max-width: unset;
+    width: 64px;
+    height: 64px;
   }
 
   .adv__card::before {

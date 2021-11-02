@@ -23,20 +23,31 @@ function onSmallPhoto(event) {
 
 
 // Модальное окно
-
+const body = document.querySelector('body')
 const cross = document.querySelector('.popUp__cross')
-const popUp = document.querySelector('.popUp')
+const popUp = document.querySelector('.popUp__container')
 const firstScreenBtn = document.querySelector('.firstScreen__btn')
 
 
+popUp.addEventListener('click', (event => {
+    const form = document.querySelector('.popUp__form')
+    if (event.target.classList.contains('close__popUp')) {
+        popUp.style.top = '-150vh';
+        popUp.style.opacity = 0;
+        form.reset()
+    }
+}))
 
 cross.addEventListener('click', (event) => {
+    const form = document.querySelector('.popUp__form')
     popUp.style.top = '-150vh';
     popUp.style.opacity = 0;
+    form.reset()
 })
 
 firstScreenBtn.addEventListener('click', (event) => {
-    popUp.style.top = '10%';
+
+    popUp.style.top = 0;
     popUp.style.opacity = 1;
 
 })

@@ -8,123 +8,134 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="popUp__container close__popUp">
+        <div class="popUp">
+            <div class="container">
+                <div class="popUp__cross"></div>
+                <div class="popUp__content">
+                    <div class="popUp__TextContent">
+                        <div class="h1">Do you want to order the perfect bouquet?</div>
+                        <div class="popUp__text">Leave your phone number and our manager will help you pick up your
+                            dream
+                            bouquet.</div>
+                    </div>
 
-    <div class="popUp">
-        <div class="container">
-            <div class="popUp__cross"></div>
-            <div class="popUp__content">
-                <div class="popUp__TextContent">
-                    <div class="h1">Do you want to order the perfect bouquet?</div>
-                    <div class="popUp__text">Leave your phone number and our manager will help you pick up your dream
-                        bouquet.</div>
+                    <form class="popUp__form" action="./sendmail.php" method="POST">
+                        <input class="popUp__form--item popUp__form--text" type="text" placeholder="Enter your name"
+                            name='user_name'>
+                        <input class="popUp__form--item popUp__form--number" type="number"
+                            placeholder="Enter your number" name='user_number'>
+                        <textarea class="popUp__form--item popUp__form--textarea" name="textarea" cols="30" rows="10"
+                            placeholder="Your message"></textarea>
+                        <input class="btn-reset  popUp__form--btn" type="submit" name='user_textarea'>
+                    </form>
                 </div>
-    
-                <form class="popUp__form" action="./sendmail.php" method="POST">
-                    <input class="popUp__form--item popUp__form--text" type="text" placeholder="Enter your name"
-                        name='user_name'>
-                    <input class="popUp__form--item popUp__form--number" type="number" placeholder="Enter your number"
-                        name='user_number'>
-                    <textarea class="popUp__form--item popUp__form--textarea" name="textarea" cols="30" rows="10"
-                        placeholder="Your message"></textarea>
-                    <input class="btn-reset  popUp__form--btn" type="submit" name='user_textarea'>
-                </form>
             </div>
         </div>
     </div>
 
-
-    <header class="header">
-        
-        <div class="container">
-            
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <img src="./img/newlogo1.png" alt="logo">
-                </div>
-                <div class="header__connection">
-                    <div class="headerConnection__imgLink headerConnection__block">
-                        <div class="headerConnection__item">
-                            <img src="./img/telegram.png" alt="">
-                        </div>
-                        <div class="headerConnection__item">
-                            <img src="./img/whatsapp.png" alt="">
-                        </div>
-                        <div class="headerConnection__item">
-                            <img src="./img/mobile.png" alt="">
-                        </div>
-                    </div>
-                    <div class="headerConnection__block headerConnection__block--phone">
-                        <a class="headerConnectionItem__link" href="#">+91 967 3466 023</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <main class="main">
-        <section class="firstScreen">
-            <div class="firstScreen__wrapper">
-                <div class="container">
-                    <div class="firstScreen__content">
-                        <div class="firstScreenContent__text">
-                            <h1 class="firstScreen__title">Flower arrangements from European florists with delivery to Goa
-                            </h1>
-                            <div class="firstScreenContent__text">Author's bouquets in which we embody our vision of beauty
+        <div class="header__firstScreen">
+            <div class="header">
+                <div class="container header__container">
+
+                    <div class="header__wrapper">
+                        <a class="header__logo--link" href="#">
+                            <div class="header__logo">
+                                <img src="./img/newlogo1.png" alt="logo">
                             </div>
-                            <a class="btn-reset firstScreen__btn" href="#">Learn more</a>
-        
-        
-                        </div>
-                        <div class="firstScreenContent__adv">
-                            <div class="adv__card">
-        
-                                <div class="adv__card--img">
-                                    <img src="./img/Group.svg" alt="">
-                                </div>
-                                <div class="adv__card--textContent">
-                                    <div class="adv__card--title">
-                                        Fresh flowers
+                        </a>
+                        <div class="header__connection">
+                            <div class="headerConnection__imgLink headerConnection__block">
+
+                                <a href="https://t.me/mopasaran" target="blank">
+                                    <div class="headerConnection__item">
+                                        <img src="./img/telegram.png" alt="">
                                     </div>
-                                    <div class="adv__card--text">We pick flowers on our own and with great love</div>
-        
-                                </div>
+                                </a>
+                                <a href="https://wa.me/79215750006" target="blank">
+                                    <div class="headerConnection__item">
+                                        <img src="./img/whatsapp.png" alt="">
+                                    </div>
+                                </a>
+                                <a href="tel:+79215750006" target="blank">
+                                    <div class="headerConnection__item">
+                                        <img src="./img/mobile.png" alt="">
+                                    </div>
+                                </a>
                             </div>
-                            <div class="adv__card">
-        
-                                <div class="adv__card--img">
-                                    <img src="./img/Group.svg" alt="">
-                                </div>
-                                <div class="adv__card--textContent">
-                                    <div class="adv__card--title">
-                                        Fresh flowers
-                                    </div>
-                                    <div class="adv__card--text">We pick flowers on our own and with great love</div>
-        
-                                </div>
-        
-                            </div>
-                            <div class="adv__card">
-        
-                                <div class="adv__card--img">
-                                    <img src="./img/Group.svg" alt="">
-                                </div>
-                                <div class="adv__card--textContent">
-                                    <div class="adv__card--title">
-                                        Fresh flowers
-                                    </div>
-                                    <div class="adv__card--text">We pick flowers on our own and with great love</div>
-        
-                                </div>
-        
+                            <div class="headerConnection__block headerConnection__block--phone">
+                                <a class="headerConnectionItem__link" href="#">+91 967 3466 023</a>
                             </div>
                         </div>
-        
                     </div>
                 </div>
             </div>
-        
-        
-        </section>
+            <section class="firstScreen">
+                <div class="firstScreen__wrapper">
+                    <div class="container">
+                        <div class="firstScreen__content">
+                            <div class="firstScreenContent__text">
+                                <h1 class="firstScreen__title">Bouquets and Flower Arrangements. Delivery within Goa
+                                </h1>
+                                <div class="firstScreenContent__text">Western style floral design
+                                </div>
+                                <a class="btn-reset firstScreen__btn" href="#">Learn more</a>
+
+
+                            </div>
+                            <div class="firstScreenContent__adv">
+                                <div class="adv__card">
+
+                                    <div class="adv__card--img">
+                                        <img src="./img/Group.svg" alt="">
+                                    </div>
+                                    <div class="adv__card--textContent">
+                                        <div class="adv__card--title">
+                                            Always fresh flowers
+                                        </div>
+                                        <div class="adv__card--text">We pick flowers on our own and with great love
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="adv__card">
+
+                                    <div class="adv__card--img">
+                                        <img src="./img/Woman2.svg" alt="">
+                                    </div>
+                                    <div class="adv__card--textContent">
+                                        <div class="adv__card--title">
+                                            Flower magic
+                                        </div>
+                                        <div class="adv__card--text">The most Unique flower arrangements in India
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="adv__card">
+
+                                    <div class="adv__card--img">
+                                        <img src="./img/Car2.svg" alt="">
+                                    </div>
+                                    <div class="adv__card--textContent">
+                                        <div class="adv__card--title">
+                                            Promptness
+                                        </div>
+                                        <div class="adv__card--text">Your flowers will be arranged and delivered right on time
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
         <section class="bouquets">
             <div class="container">
@@ -132,7 +143,7 @@
                 <div class="bouquets__container">
                     <div class="bouquet__block">
                         <div class="bouquet_wrapperImg">
-                            <a class="bouquet_wrapperImg--link"  href="./bouquet.html"></a>
+                            <a class="bouquet_wrapperImg--link" href="./bouquet.html"></a>
                             <img src="./img/baqet.jpeg" alt="bouquet">
                         </div>
                         <div class="our__bouquets--title">Everything Is Coming Up Roses</div>
@@ -173,13 +184,15 @@
                         <div class="our__bouquets--title">Everything Is Coming Up Roses</div>
                         <div class="our__bouquets--price">$85.00</div>
                     </div>
-        
+
                 </div>
             </div>
         </section>
 
-        
+
     </main>
+
+
 
     <footer class="footer">
         <div class="container">
@@ -207,6 +220,6 @@
         </div>
     </footer>
 
-<script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

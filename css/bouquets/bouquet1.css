@@ -4,6 +4,21 @@
 @import url("../_overall.css");
 @import url("../style.css");
 
+/* .body__bouquet {
+  height: 100%;
+} */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  height: 100vh;
+}
+
+.saleCard {
+  flex: 1 1 auto;
+}
+
 .card {
   display: flex;
   flex-wrap: wrap;
