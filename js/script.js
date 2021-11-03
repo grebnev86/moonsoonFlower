@@ -1,56 +1,34 @@
-// Переключение картинок
-
-const bigPhoto = document.querySelector('.card__photo--big')
-const smallPhoto = document.querySelectorAll('.card__photo--small img')
-const divSmallPhoto = document.querySelectorAll('.card__photo--small .img')
-
-
-
-for (let i = 0; i < smallPhoto.length; i++) {
-    bigPhoto.style.backgroundImage = `url(${smallPhoto[0].src})`
-    smallPhoto[i].addEventListener('click', onSmallPhoto)
-    smallPhoto[0].style.opacity = 1
-}
-
-function onSmallPhoto(event) {
-    bigPhoto.style.backgroundImage = `url(${event.target.src})`
-    for (let i = 0; i < smallPhoto.length; i++) {
-        smallPhoto[i].style.opacity = 0.5
-    }
-
-    event.target.style.opacity = 1
-}
-
 
 // Модальное окно
 const body = document.querySelector('body')
 const cross = document.querySelector('.popUp__cross')
 const popUp = document.querySelector('.popUp__container')
 const firstScreenBtn = document.querySelector('.firstScreen__btn')
+const form = document.querySelector('.popUp__form')
+const thanks = document.querySelector('.popUp__thanks')
 
 
-popUp.addEventListener('click', (event => {
-    const form = document.querySelector('.popUp__form')
+popUp.addEventListener('click', (event) => {
     if (event.target.classList.contains('close__popUp')) {
         popUp.style.top = '-150vh';
         popUp.style.opacity = 0;
         form.reset()
+        body.classList.remove('disable__scroll')
     }
-}))
+})
 
 cross.addEventListener('click', (event) => {
-    const form = document.querySelector('.popUp__form')
     popUp.style.top = '-150vh';
     popUp.style.opacity = 0;
     form.reset()
+    body.classList.remove('disable__scroll')
 })
 
 firstScreenBtn.addEventListener('click', (event) => {
-
+    popUp.style.left = 0;
     popUp.style.top = 0;
     popUp.style.opacity = 1;
-    popUp.style.top = 0;
-
+    body.classList.add('disable__scroll')
 })
 
 
@@ -65,34 +43,64 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     async function formSend(event) {
         event.preventDefault()
-        let error = formValidate(form)
-        let formData = new FormData(form)
+        let error = formValidate()
+        const formNumber = document.querySelector('.popUp__form--number')
+        if (error != 0) {
 
-        form.classList.add('_sending')
-
-        let response = await fetch('sendmail.php', {
-            method: 'POST',
-            body: formData
-        })
-
-
-
-        if (response.ok) {
-            let result = await response.json()
-            // formPreview.innerHTML = '';
-            form.reset()
-            form.classList.remove('_sending')
+            formNumber.classList.add('error__form')
         }
-
         else {
-            alert('Error')
-            form.classList.remove('_sending')
+            let formData = new FormData(form)
+
+            form.classList.add('_sending')
+            let response = await fetch('https://my-json-server.typicode.com/typicode/demo/posts', {
+                method: 'POST',
+                body: formData
+            })
+
+
+
+            if (response.ok) {
+                let result = await response.json()
+                form.reset()
+                form.classList.remove('_sending')
+                formNumber.classList.remove('error__form')
+                //// close form after sucsess sending
+                popUp.style.top = '-150vh';
+                popUp.style.opacity = 0;
+                form.reset()
+                body.classList.remove('disable__scroll')
+                thanks.classList.remove('close__thankyou')
+
+                setTimeout(() => {
+                    thanks.classList.add('close__thankyou')
+                }, 3000)
+
+
+            }
+
+            else {
+                alert('Error')
+                form.classList.remove('_sending')
+            }
+
         }
+
     }
 
     function formValidate(form) {
         let error = 0
-        let formReq = document.querySelectorAll('._req')
+        let formReq = document.querySelector('.popUp__form--number')
+
+
+        if (formReq.value.length < 5) {
+            error++
+        }
+
+
+
+
+        return error
     }
 })
 

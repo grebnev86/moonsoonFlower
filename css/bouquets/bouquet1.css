@@ -1,17 +1,13 @@
-@import url("../_normalize.css");
-@import url("../_global.css");
-@import url("../_fonts.css");
-@import url("../_overall.css");
-@import url("../style.css");
-
-/* .body__bouquet {
-  height: 100%;
-} */
+@import url("/css/normalize.css");
+@import url("/css/global.css");
+@import url("/css/fonts.css");
+@import url("/css/overall.css");
+@import url("/css/style.css");
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   height: 100vh;
 }
 
@@ -35,11 +31,18 @@
   padding-bottom: 70%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   height: 30%;
   /* min-height: 400px; */
   opacity: 1;
-  transition: background-image 0.2s ease-in;
+  transition: background-image 0.2s ease-in, transform 0.2s ease-in;
+  position: relative;
+  z-index: 5;
+}
+
+.bigPhoto {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in;
 }
 
 .card__photo--small {
@@ -105,7 +108,7 @@
 
 @media screen and (max-width: 960px) {
   .card__block {
-    width: calc(100% - 30px);
-    padding: 15px;
+    width: 100%;
+    padding: 15px 0;
   }
 }
