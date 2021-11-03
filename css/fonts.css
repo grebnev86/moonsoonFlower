@@ -18,6 +18,16 @@
 
 @font-face {
   font-family: "PlayfairDisplay";
+  /* src: url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Medium.woff") format("woff"); */
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght_1.woff")
+    format("woff");
+  font-display: swap;
+  font-weight: 500; /*regular*/
+  font-style: italic;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
   src: url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2"),
     url("../fonts/PlayfairDisplay-Medium.woff") format("woff");
   font-display: swap;
