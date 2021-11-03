@@ -6,7 +6,7 @@ const popUp = document.querySelector('.popUp__container')
 const firstScreenBtn = document.querySelector('.firstScreen__btn')
 const form = document.querySelector('.popUp__form')
 const thanks = document.querySelector('.popUp__thanks')
-
+const formNumber = document.querySelector('.popUp__form--number')
 
 popUp.addEventListener('click', (event) => {
     if (event.target.classList.contains('close__popUp')) {
@@ -14,6 +14,7 @@ popUp.addEventListener('click', (event) => {
         popUp.style.opacity = 0;
         form.reset()
         body.classList.remove('disable__scroll')
+        formNumber.classList.remove('error__form')
     }
 })
 
@@ -22,6 +23,7 @@ cross.addEventListener('click', (event) => {
     popUp.style.opacity = 0;
     form.reset()
     body.classList.remove('disable__scroll')
+    formNumber.classList.remove('error__form')
 })
 
 firstScreenBtn.addEventListener('click', (event) => {
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     async function formSend(event) {
         event.preventDefault()
         let error = formValidate()
-        const formNumber = document.querySelector('.popUp__form--number')
+
         if (error != 0) {
 
             formNumber.classList.add('error__form')
